@@ -12,7 +12,7 @@
 #include <std_msgs/msg/float32.h>
 #include <std_msgs/msg/int32_multi_array.h>
 #include <geometry_msgs/msg/vector3.h>
-#include <sensor_msgs/msg/magnetic_field.h>
+//#include <sensor_msgs/msg/magnetic_field.h>
 
 extern rcl_publisher_t depth_pub;
 extern rcl_publisher_t imu_pub;

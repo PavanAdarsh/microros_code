@@ -18,8 +18,8 @@ void setup() {
   while (!Serial) {
     delay(1);
   }
-  Wire.setSDA(PB7);
-  Wire.setSCL(PB8);
+  // Wire.setSDA(7);
+  // Wire.setSCL(8);
   Wire.begin();
   
   initializeCommunication();
