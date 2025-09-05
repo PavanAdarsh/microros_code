@@ -18,9 +18,7 @@ void setup() {
   while (!Serial) {
     delay(1);
   }
-  // Wire.setSDA(7);
-  // Wire.setSCL(8);
-  Wire.begin();
+  Wire.begin(21, 22);
   
   initializeCommunication();
   initializeIMU();
