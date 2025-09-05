@@ -75,7 +75,6 @@ void updateOffset(MPU6050 gyro) {
   gyroscopeOffset.array[2] /= NO_OF_SAMPLES;
   accelerometerOffset.array[2] -= 1;
 
-  nh.loginfo("Imu calibrated.");
   // double dtostrf(gyrosc, min_width, num_digits_after_decimal,
   // where_to_store_string); ROS_INFO("Gyroscope offsets:\ngx=%d ,gy =%d ,gz=%d
   // .",

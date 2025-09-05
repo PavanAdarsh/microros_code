@@ -5,6 +5,7 @@
 #include <mpu6050.hpp>
 
 #include "Adafruit_FXOS8700.h"
+#include "HMC5883L.h"
 #include "MS5837.h"
 #include "sensor_math.hpp"
 
@@ -12,6 +13,7 @@
 #define MAG_ID 0x8700B
 
 #define FXOS8700_ADDRESS 0x1F
+#define HMC5883L_ADDRESS 0x1E
 #define MS5837_ADDR 0x76
 #define MPU6050_ADDRESS 0x68
 
@@ -23,6 +25,7 @@ void updateIMUReadings(float& ax, float& ay, float& az, float& gx, float& gy,
 void updateDepthSensorReadings(float& depth);
 
 extern MPU6050 gyro;
-extern Adafruit_FXOS8700 accelmag;
+//extern Adafruit_FXOS8700 accelmag;
+extern HMC5883L accelmag;
 extern MS5837 depth_sensor;
 #endif  // SENSOR_INTERFACE_HPP

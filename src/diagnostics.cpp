@@ -32,7 +32,6 @@ void setLED(int16_t led_indicator)
       digitalWrite(led_pinmap[pin_index], LOW);
     }
   }
-  nh.loginfo("LED glowing.");
   return;
   //   }
   // }

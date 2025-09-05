@@ -1,12 +1,13 @@
 #include "main.hpp"
 
-#include <ros.h>
+#include <micro_ros_arduino.h>
 
 #include "Wire.h"
 
 float ax, ay, az, gx, gy, gz, mx, my, mz, depth, roll, pitch, yaw;
 
-Adafruit_FXOS8700 accelmag = Adafruit_FXOS8700(ACCEL_ID, MAG_ID);
+//Adafruit_FXOS8700 accelmag = Adafruit_FXOS8700(ACCEL_ID, MAG_ID);
+HMC5883L accelmag;
 MPU6050 gyro;
 MS5837 depth_sensor;
 
@@ -18,7 +19,7 @@ void setup() {
     delay(1);
   }
   Wire.setSDA(PB7);
-  Wire.setSCL(PB6);
+  Wire.setSCL(PB8);
   Wire.begin();
   
   initializeCommunication();

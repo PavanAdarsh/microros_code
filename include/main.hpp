@@ -10,6 +10,6 @@
 #include "diagnostics.hpp"
 
 #define UPDATE_RATE 100
-#define PUBLISH_RATE 100
+#define PUBLISH_RATE 10
 
 #endif  // MAIN_HPP

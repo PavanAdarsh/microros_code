@@ -1,12 +1,9 @@
 #ifndef SENSOR_MATH_HPP
 #define SENSOR_MATH_HPP
 #include <Arduino.h>
-#include <ros.h>
 
 #include "mpu6050.hpp"
 #define NO_OF_SAMPLES 3000
-
-extern ros::NodeHandle nh;
 
 void initializeSensorMath();
 void updateOffset(MPU6050 gyro);

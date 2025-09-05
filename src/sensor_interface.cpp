@@ -1,6 +1,7 @@
 #include "sensor_interface.hpp"
 
 #include "config.hpp"
+#include <Adafruit_Sensor.h>
 
 void initializeIMU() {
   sensor_t accel, mag;
@@ -20,8 +21,13 @@ void initializeDepthSensor() {
 
 void updateIMUReadings(float& ax, float& ay, float& az, float& gx, float& gy,
                        float& gz, float& mx, float& my, float& mz) {
-  sensors_event_t accel_event, mag_event;
-  accelmag.getEvent(&accel_event, &mag_event);
+  //sensors_event_t accel_event, mag_event;
+  //accelmag.getEvent(&accel_event, &mag_event);
+
+  Vector mag_event;
+  //mag_event = accelmag.readNormalize();
+  mag_event = accelmag.readNormalize();
+
   float Ax, Ay, Gx, Gy;
   gyro.getSensorsReadings(Ax, Ay, az, Gx, Gy, gz);
   ax = Ay / G;
@@ -30,9 +36,14 @@ void updateIMUReadings(float& ax, float& ay, float& az, float& gx, float& gy,
   gx = Gy;
   gy = -Gx;
 
-  mx = mag_event.magnetic.x;
-  my = mag_event.magnetic.y;
-  mz = mag_event.magnetic.z;
+  // mx = mag_event.magnetic.x;
+  // my = mag_event.magnetic.y;
+  // mz = mag_event.magnetic.z;
+
+  mx = mag_event.XAxis;
+  my = mag_event.YAxis;
+  mz = mag_event.ZAxis;
+
 }
 // void setCalibrationMode(bool &calib_status){
 //   bool calibration_mode = calib_status;
