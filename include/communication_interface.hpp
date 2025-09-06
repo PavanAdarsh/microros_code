@@ -5,6 +5,7 @@
 #include <rcl/rcl.h>
 #include <rclc/rclc.h>
 #include <rclc/executor.h>
+#include <rcutils/logging_macros.h>
 #include <Arduino.h>
 
 #include <std_msgs/msg/bool.h>

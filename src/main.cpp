@@ -1,6 +1,9 @@
 #include "main.hpp"
 
 #include <micro_ros_arduino.h>
+#include <rcl/rcl.h>
+#include <rclc/executor.h>
+#include <rclc/rclc.h>
 
 #include "Wire.h"
 
