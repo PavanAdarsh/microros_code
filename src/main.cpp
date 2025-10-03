@@ -1,6 +1,6 @@
 #include "main.hpp"
 
-#include <micro_ros_arduino.h>
+#include <micro_ros_platformio.h>
 #include <rcl/rcl.h>
 #include <rclc/executor.h>
 #include <rclc/rclc.h>
@@ -17,7 +17,7 @@ MS5837 depth_sensor;
 long int previous_update_rate = 0, previous_publish_rate = 0;
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
   while (!Serial) {
     delay(1);
   }

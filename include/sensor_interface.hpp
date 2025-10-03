@@ -15,7 +15,7 @@
 #define FXOS8700_ADDRESS 0x1F
 #define HMC5883L_ADDRESS 0x1E
 #define MS5837_ADDR 0x76
-#define MPU6050_ADDRESS 0x68
+#define MPU6050_ADDRESS 0x69
 
 void initializeIMU();
 void initializeDepthSensor();

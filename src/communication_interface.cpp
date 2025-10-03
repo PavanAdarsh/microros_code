@@ -25,7 +25,7 @@ rcl_subscription_t calibration_sub;
 rcl_subscription_t led_sub;
 
 void initializeCommunication() {
-  set_microros_transports();
+  set_microros_serial_transports(Serial);
   rcl_allocator_t allocator = rcl_get_default_allocator();
   rclc_support_t support;
   rcl_node_t node;

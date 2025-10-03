@@ -1,7 +1,7 @@
 #ifndef COMMUNICATION_INTERFACE_HPP
 #define COMMUNICATION_INTERFACE_HPP
 
-#include <micro_ros_arduino.h>
+#include <micro_ros_platformio.h>
 #include <rcl/rcl.h>
 #include <rclc/rclc.h>
 #include <rclc/executor.h>
